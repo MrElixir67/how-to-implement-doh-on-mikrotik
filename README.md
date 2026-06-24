@@ -6,15 +6,11 @@ A complete, step-by-step guide to enable **DNS over HTTPS (DoH)** on your MikroT
 
 Standard DNS queries are sent in plaintext — your ISP, any network intermediary, or even someone on the same WiFi can see every domain you request. DNS over HTTPS wraps these queries in TLS-encrypted HTTPS traffic, making them indistinguishable from regular web browsing.
 
-```
-Without DoH:
-Device -> MikroTik -> ISP DNS (plaintext) -> Internet
-                          ^ your ISP sees every domain
+![Architecture](assets/architecture.svg)
 
-With DoH:
-Device -> MikroTik -> DoH Cloudflare (HTTPS encrypted) -> Internet
-                          ^ your ISP only sees "connection to 1.1.1.1"
-```
+## Why DoH?
+
+Standard DNS queries are sent in plaintext — your ISP, any network intermediary, or even someone on the same WiFi can see every domain you request. DNS over HTTPS wraps these queries in TLS-encrypted HTTPS traffic, making them indistinguishable from regular web browsing.
 
 ## Prerequisites
 
